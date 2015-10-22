@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from datetime import datetime
-from elasticsearch_dsl import DocType, String, Date, Integer,  Nested
+from elasticsearch_dsl import DocType, String, Date, Integer, Nested, MetaField
 
 import settings
 
@@ -55,3 +55,4 @@ class Journal(DocType):
 
     class Meta:
         index = settings.INDEX
+        dynamic = MetaField('strict')

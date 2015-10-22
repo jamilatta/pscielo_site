@@ -18,3 +18,4 @@ class Article(DocType):
     class Meta:
         index = settings.INDEX
         parent = MetaField(type='issue')
+        dynamic = MetaField('strict')

@@ -32,3 +32,4 @@ class Issue(DocType):
     class Meta:
         index = settings.INDEX
         parent = MetaField(type='journal')
+        dynamic = MetaField('strict')
